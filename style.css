@@ -5,6 +5,16 @@
     background-color: #0d0425;
 }
 
+.formulario{
+    color: #ecf0f1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#formulario-registro{
+
+}
+
+
 .contenedor {
     display: flex;
     align-items: center;
