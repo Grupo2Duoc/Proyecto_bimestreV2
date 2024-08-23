@@ -362,18 +362,57 @@ button.btn-secondary:hover {
 }
 
 
-/* INICIO DE SESIÓN Y RECUPERACION DE CONTRASEÑA*/
-.navbar .form-control {
-    margin-right: 5px;
-    min-width: 120px;
-  }
-  
-  .container h2 {
-    margin-bottom: 20px;
-  }
-  
-  .container {
-    max-width: 150px;
-    margin-top: 200px;
-  }
-  
+
+/* INICIO DE SESIÓN Y RECUPERACION DE CONTRASEÑA */
+.login-container {   
+    right: 0; /* Desde el lado derecho */
+    margin-top: 6rem; /* Espacio debajo de la navbar */
+    background-color: #0d0425; /* color del fondo*/    
+    padding: 0.25rem; /* Reduce el espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    min-height: 65px; /* Altura mínima más pequeña para el contenedor */
+    margin-right: 20px; /*margen derecho del contenedor*/
+}
+
+/* Estilo de los inputs dentro del contenedor de inicio de sesión */
+.login-container input {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 25px; /* Ajusta la altura de los inputs (más compactos) */
+    margin-right: 0.25rem; /* Reduce el espacio entre inputs */
+    font-size: 0.6rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo del botón de inicio de sesión */
+.login-container .btn {
+    height: 30px; /* Altura más compacta de los botones */
+    font-size: 0.75rem; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo del enlace de recuperación de contraseña */
+.login-container .btn-link {
+    padding-left: 0; /* Elimina padding izquierdo para alinear mejor */
+    font-size: 0.40rem; /* Tamaño de fuente más pequeño para el enlace */
+}
+
+/* Estilos generales para todos los elementos del contenedor */
+.login-container .btn, 
+.login-container input {
+    padding: 0.10rem; /* Reduce el espaciado interno uniforme */
+}
+
+/* Aumenta el ancho del botón de inicio de sesión */
+.login-container .btn {
+    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+    height: 25px; /* Ajusta la altura del botón si es necesario */
+    font-size: 0.7rem; /* Tamaño de fuente más pequeño, ajusta según sea necesario */
+    color: white;
+}
+
+/* Centra el texto del enlace de 'Recuperación de Contraseña' */
+.login-container .btn-link {
+    display: block; /* Cambia el enlace a un bloque para poder centrarlo */
+    text-align: center; /* Centra el texto */    
+    margin-top: 0rem; /* Espacio arriba del enlace */
+    color: white;
+}
