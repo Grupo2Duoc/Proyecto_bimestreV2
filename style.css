@@ -1,10 +1,5 @@
 
-
-.formulario{
-    color: #ecf0f1;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
+/*ESTILOS PARA EL BODY */
 body {
     font-family: Arial, sans-serif;
     background-color: #2c3e50;
@@ -30,17 +25,53 @@ body {
     margin-right: 50px;
 }
 
+/* ENLACES DE BARRA DE NAVEGACION - Estilos */
+.nav-link {
+    color: #000; /* Color de texto predeterminado */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* ENLACES DE BARRA NAVEGACION - Efecto hover */
+.nav-link:hover {
+    color: #fff; /* Color de texto al hacer hover */
+    background-color: #d4d4d4; /* Color de fondo al hacer hover */
+    border-radius: 5px; /* Un poco de redondeo en las esquinas al hacer hover */
+}
+
+/* DROPDOWN - Estilos para los elementos */
+.dropdown-menu a {
+    color: #000; /* Color de texto predeterminado */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* DROPDOWN - Efecto hover para los elementos  */
+.dropdown-menu a:hover {
+    color: #fff; /* Color de texto al hacer hover */
+    background-color: #d4d4d4; /* Color de fondo al hacer hover */
+}
+
+
 .textos {
     align-self: center;
 }
 
+/* BOTON DE REGISTRO */
 .boton {
     float: right;
     margin-left: 20px;
     border: 5px solid rgb(132, 132, 141);
     border-radius: 30px;
     height: 40px;
+    background-color: #f0f0f0; /* Color de fondo inicial */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
 }
+/* BOTON: Efecto hover */
+.boton:hover {
+    background-color: #afadad; /* Color de fondo al hacer hover */
+    border-color: #888888; /* Cambio en el color del borde al hacer hover */
+    cursor: pointer; /* Cambia el cursor al puntero */
+}
+
 
 #titulo {
     text-align: center;
@@ -143,7 +174,7 @@ nav {
 #precio {
     float: right;
     color: #5d9aaa;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .price {
@@ -174,21 +205,27 @@ nav {
     max-width: 600px;
 }
 
-/* Footer styling */
+/* Estilo del Footer */
 .footer {
     background-color: darkgray;
     font-size: 10px;
     height: 20px;
     text-align: center;
     padding: 5px;
+    color: #FFD700;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
-/* Button adjustments */
+/* Ajustes del botón */
 .btn.btn-primary {
-    font-size: 16px;
+    font-size: 15px;
+    text-align: center;
+    justify-content: flex-end;
+    
 }
 
-/* Novedades title */
+/* Título Novedades */
 .novedades {
     font-size: 48px;
     color: #FFD700;
@@ -199,50 +236,144 @@ nav {
     margin-bottom: 30px;
 }
 
-/* Adjust description text */
-.card-text {
-    font-size: 14px; /* Adjusted size for better readability */
-    line-height: 1.6; /* Increased line height for better readability */
+/*ESTILOS TARJETAS DE ARTICULOS EN TODAS LAS PAGINAS */
+.card {
+    height: 100%; /* Limita el tamaño de las tarjetas para que tengan la misma altura */
 }
 
-/* Responsive styling */
+/* Ajustes a la descripción del texto*/
+.card-text {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    line-height: 1.6; /* Altura de línea de 1.6 para legibilidad */    
+    display: -webkit-box; /* Necesario para el efecto de truncado en varias líneas */
+    -webkit-box-orient: vertical; /* Define la orientación del contenido en el contenedor */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Muestra "..." al final del texto truncado */    
+    -webkit-line-clamp: 4; /* Limita el número de líneas a 4 */
+    max-height: calc(1.6em * 4); /* Define una altura máxima para 4 líneas */    
+}
+
+/* Estilo Responsivo */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
     }
-
     .navegador {
         margin: 10px 0;
     }
 }
 
-    /* Ajuste de imagen para evitar distorsión */
-    .card-img-top {
-        object-fit: cover;
-        width: 100%;
-        height: 250px;
-      }
+/* Ajuste de imagen para evitar distorsión */
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+ }
   
-      /* "Novedades del Mes" */
-      .novedades {
-        text-align: center;
-        margin-bottom: 30px;
-      }
+/* "Novedades del Mes" */
+.novedades {
+    text-align: center;
+    margin-bottom: 30px;
+}
   
-      .novedades h1 {
-        font-size: 48px;
-        color: #FFD700;
-        font-family: 'Arial', sans-serif;
-        font-weight: bold;
-        text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
-      }
+.novedades h1 {
+    font-size: 48px;
+    color: #FFD700;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
+}
   
-      /* Línea divisora */
-      .novedades-linea {
-        width: 50%;
-        margin: 0 auto;
-        border: 0;
-        height: 3px;
-        background-color: #FFD700;
-        margin-bottom: 20px;
-      }
+/* Línea divisora */
+.novedades-linea {
+    width: 50%;
+    margin: 0 auto;
+    border: 0;
+    height: 3px;
+    background-color: #FFD700;
+    margin-bottom: 20px;
+}
+
+
+
+/* ESTILOS PARA EL FORMULARIO DE PAGINA DE REGISTRO */
+.formulario{
+    color: #f1f4f5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #6c6f72;    
+}
+/*FORMULARIO - Contenedor*/
+.container .card {
+    background-color: #f0f8ff; /* Color de fondo del formulario */
+    border: 1px solid #b0c4de; /* Borde del formulario */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* FORMULARIO: Estilos para los campos de entrada */
+input.form-control, 
+select.form-control, 
+textarea.form-control {
+    background-color: #e6f7ff; /* Color de fondo de los campos */
+    border: 1px solid #7fbcd3; /* Borde de los campos */
+    padding: 10px; /* Espaciado interno de los campos */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* FORMULARIO : Estilo cuando el usuario hace hover en los campos */
+input.form-control:hover, 
+select.form-control:hover, 
+textarea.form-control:hover {
+    background-color: #d0eafc; /* Color de fondo al pasar el mouse */
+    border-color: #4da3d9; /* Borde al pasar el mouse */
+}
+
+/* FORMULARIO : Estilo cuando el usuario hace focus (clic) en los campos */
+input.form-control:focus, 
+select.form-control:focus, 
+textarea.form-control:focus {
+    background-color: #cbe6fc; /* Color de fondo al hacer clic */
+    border-color: #1e81b0; /* Borde al hacer clic */
+    outline: none; /* Eliminamos el borde azul por defecto */
+    box-shadow: 0 0 5px rgba(30, 129, 176, 0.5); /* Sombra sutil al hacer clic */
+}
+
+/* FORMULARIO: Estilo para los botones */
+button.btn-primary {
+    background-color: #4da3d9; /* Color de fondo del botón Guardar */
+    border-color: #4da3d9; /* Borde del botón Guardar */
+}
+
+button.btn-primary:hover {
+    background-color: #1e81b0; /* Color de fondo del botón Guardar al pasar el mouse */
+    border-color: #1e81b0; /* Borde del botón Guardar al pasar el mouse */
+}
+
+button.btn-secondary {
+    background-color: #b0bcd3; /* Color de fondo del botón Limpiar */
+    border-color: #b0bcd3; /* Borde del botón Limpiar */
+}
+
+button.btn-secondary:hover {
+    background-color: #7f93a5; /* Color de fondo del botón Limpiar al pasar el mouse */
+    border-color: #7f93a5; /* Borde del botón Limpiar al pasar el mouse */
+}
+
+
+/* INICIO DE SESIÓN Y RECUPERACION DE CONTRASEÑA*/
+.navbar .form-control {
+    margin-right: 5px;
+    min-width: 120px;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    max-width: 150px;
+    margin-top: 200px;
+  }
+  
